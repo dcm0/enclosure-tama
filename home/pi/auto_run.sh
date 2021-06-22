@@ -214,7 +214,7 @@ function update_software() {
         echo "This might take a few minutes, please be patient..."
 
         cd /tmp
-        wget -N -q https://raw.githubusercontent.com/MycroftAI/enclosure-picroft/buster/home/pi/version >/dev/null
+        wget -N -q https://raw.githubusercontent.com/dcm0/enclosure-tama/buster/home/pi/version >/dev/null
         if [ $? -eq 0 ]
         then
             if [ ! -f ~/version ] ; then
@@ -228,7 +228,7 @@ function update_software() {
                 echo "**** Update found, downloading new Picroft scripts!"
                 speak "Updating Picroft, please hold on."
 
-                wget -N -q https://raw.githubusercontent.com/MycroftAI/enclosure-picroft/buster/home/pi/update.sh
+                wget -N -q https://raw.githubusercontent.com/dcm0/enclosure-tama/buster/home/pi/update.sh
                 if [ $? -eq 0 ]
                 then
                     source update.sh

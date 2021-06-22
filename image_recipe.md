@@ -8,6 +8,8 @@ NOTE: At startup Picroft will automatically update itself to the latest version 
 ### Start with the official Raspbian Image
 * Download and burn [Raspbian Buster Lite](https://downloads.raspberrypi.org/raspbian_lite_latest).
   <br>_Last used 2019-09-26 version_
+  <bR> Trying the latest 2021 cversion
+* 'touch ssh' in boot to enable ssh on the new versions of pios (before sticking it in the pi)
 * Install into Raspberry Pi and boot
   - login: pi
   - password: raspberry
@@ -70,7 +72,7 @@ NOTE: At startup Picroft will automatically update itself to the latest version 
 
 ## Install Picroft scripts
 * cd ~
-* wget -N https://rawgit.com/MycroftAI/enclosure-picroft/buster/home/pi/update.sh
+* wget -N https://rawgit.com/dcm0/enclosure-tama/buster/home/pi/update.sh
 * bash update.sh
 
 **The update.sh script will perform all of the following steps in this section...**
@@ -117,7 +119,7 @@ When asked by dev_setup, answer as follows:
 
 ##### Install git and mycroft-core
 * ```sudo apt-get install git```
-* ```git clone https://github.com/MycroftAI/mycroft-core.git```
+* ```git clone https://github.com/dcm0/mycroft-core.git```
 * ```cd mycroft-core```
 * ```git checkout master```
 * ```bash dev_setup.sh```

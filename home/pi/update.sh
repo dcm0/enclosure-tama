@@ -19,9 +19,9 @@
 # update.sh
 ##########################################################################
 # This script is executed by the auto_run.sh when a new version is found
-# at https://github.com/MycroftAI/enclosure-picroft/tree/buster
+# at https://github.com/dcm0/enclosure-tama/tree/buster
 
-REPO_PATH="https://raw.githubusercontent.com/MycroftAI/enclosure-picroft/buster"
+REPO_PATH="https://raw.githubusercontent.com/dcm0/enclosure-tama/buster"
 
 if [ ! -f /etc/mycroft/mycroft.conf ] ;
 then
@@ -65,7 +65,7 @@ then
 
     echo "Downloading 'mycroft-core'..."
     cd ~
-    git clone https://github.com/MycroftAI/mycroft-core.git
+    git clone https://github.com/dcm0/mycroft-core.git
     cd mycroft-core
     # git checkout master
 
