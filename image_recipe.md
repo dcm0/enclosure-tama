@@ -1,4 +1,4 @@
-# Recipe for creating the Picroft IMG
+# Recipe for creating the Picroft Tama IMG
 
 These are the steps followed to create the base image for Picroft on Raspbian Buster.  This was performed on a Raspberry Pi 3B+ or Pi 4
 
@@ -116,6 +116,12 @@ When asked by dev_setup, answer as follows:
    #####################################
    source ~/auto_run.sh
    ```
+##### Install seed updated voicecard driver from HinTak
+
+git clone https://github.com/HinTak/seeed-voicecard
+cd seeed-voicecard
+sudo ./install.sh
+sudo reboot
 
 ##### Install git and mycroft-core
 * ```sudo apt-get install git```
@@ -123,8 +129,9 @@ When asked by dev_setup, answer as follows:
 * ```cd mycroft-core```
 * ```git checkout master```
 * ```bash dev_setup.sh```
-
 (Wait an hour on a RPi 3B+/4)
+
+
 
 ## Final steps
 * Run ```. ~/bin/mycroft-wipe --keep-skills```
