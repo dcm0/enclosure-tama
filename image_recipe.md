@@ -41,6 +41,9 @@ NOTE: At startup Picroft will automatically update itself to the latest version 
   - 5 Interfacing Options
       - P2 SSH
           - Pick *Yes*
+      - P6 Serial Port
+          - Login over serial *No*
+          - Enable serial port hardware *Yes*
   - Finish and reboot
 
 ### Set the device to not use locale settings provided by ssh
@@ -125,13 +128,16 @@ sudo reboot
 
 ##### Install git and mycroft-core
 * ```sudo apt-get install git```
-* ```git clone https://github.com/dcm0/mycroft-core.git```
+* ```git clone -b dev https://github.com/dcm0/mycroft-core.git```
 * ```cd mycroft-core```
 * ```git checkout master```
 * ```bash dev_setup.sh```
 (Wait an hour on a RPi 3B+/4)
 
-
+##### Set platform to be Tama
+in /etc/mycroft/mycroft.conf change: 
+* ```"enclosure":"picroft" ---> "enclosure":"tama"```
+(Make sure its not set in $HOME/.mycroft/mycroft.conf as well)
 
 ## Final steps
 * Run ```. ~/bin/mycroft-wipe --keep-skills```
